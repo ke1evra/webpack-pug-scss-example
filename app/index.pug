@@ -1,9 +1,29 @@
+-
+  var pkgData = {
+    name: 'name',
+    title: 'title',
+    description: 'description',
+    url: {
+      author: 'https://github.com/t--takai',
+      github: 'https://github.com/t--takai/webpack-pug-scss-boilerplate',
+      twitter: 'https://twitter.com/TomonariTakai',
+    },
+  };
+
+- var dateNow = (new Date()).toLocaleDateString('ja-JP');
+
 doctype html
-html(lang="en")
+html(lang="ja")
   head
     meta(charset="UTF-8")
+    meta(name="description" content=pkgData.description)
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Document
+    title #{pkgData.title} | #{pkgData.name}
   body
     include includes/header.pug
+    main.main
+      P #{pkgData.description}
+      P #{dateNow}
+    footer.footer
+      p footer

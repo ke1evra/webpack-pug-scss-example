@@ -3,6 +3,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const { browserslist } = './package.json'
 
 const publicPath = '/'
 
@@ -85,7 +86,11 @@ const sharedCSSLoaders = [
 exports.autoprefix = () => ({
   loader: 'postcss-loader',
   options: {
-    plugins: () => [require('autoprefixer')]
+    plugins: () => [require('autoprefixer')({
+      browsers: browserslist,
+      flexbox: true,
+      grid: 'autoplace'
+    })]
   }
 })
 
