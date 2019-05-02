@@ -7,17 +7,8 @@ const TerserPlugin = require('terser-webpack-plugin')
 const { browserslist } = './package.json'
 
 const publicPath = '/'
-// if (process.env.production) {
-//   console.log('ENV: production', process.env)
-// } else {
-//   console.log('ENV: Development', process.env)
-// }
 
-// exports.publicPath = publicPath
-exports.publicPath = env => {
-  console.log('parts.env', env, process.env.NODE_ENV)
-  return publicPath
-}
+exports.publicPath = publicPath
 
 exports.devServer = ({ host, port } = {}) => ({
   devServer: {

@@ -105,7 +105,8 @@ const productionConfig = merge([
     },
     output: {
       chunkFilename: `${paths.js}/[name].[chunkhash:8].js`,
-      filename: `${paths.js}/[name].[chunkhash:8].js`
+      filename: `${paths.js}/[name].[chunkhash:8].js`,
+      publicPath: './'
     },
     performance: {
       hints: 'warning', // 'error' or false are valid too
@@ -194,9 +195,6 @@ const productionConfig = merge([
 const developmentConfig = merge([
   {
     mode: 'development'
-    // output: {
-    //   publicPath: parts.publicPath
-    // }
   },
   parts.devServer({
     host: process.env.HOST,
@@ -208,13 +206,10 @@ const developmentConfig = merge([
 ])
 
 module.exports = env => {
-  console.log('env', env)
   if (env.prod) {
     process.env.NODE_ENV = 'production'
-    console.log('env.prod: ', env.prod, process.env.NODE_ENV)
   } else {
     process.env.NODE_ENV = 'development'
-    console.log('env.prod: ', env.prod, process.env.NODE_ENV)
   }
 
   return merge(
