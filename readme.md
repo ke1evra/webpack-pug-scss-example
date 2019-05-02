@@ -106,3 +106,8 @@ app/
     require('./path/to/page.pug');
   }
   ```
+
+## References:
+* [Webpack examples](https://github.com/webpack/webpack/tree/master/examples)
+* [Pug](https://pugjs.org/api/getting-started.html)
+* [Autoprefixer](https://github.com/postcss/autoprefixer)

@@ -8,9 +8,9 @@
   "scripts": {
     "analyze": "webpack-bundle-analyzer ./stats.json",
     "prebuild": "yarn install",
-    "build": "webpack --env production --progress",
+    "build": "webpack --env.prod --progress",
     "predev": "yarn install",
-    "dev": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --open --hot --env development\""
+    "dev": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --open --hot --env.development\""
   },
   "keywords": [
     "boilerplate",

@@ -194,6 +194,9 @@ const productionConfig = merge([
 const developmentConfig = merge([
   {
     mode: 'development'
+    // output: {
+    //   publicPath: parts.publicPath
+    // }
   },
   parts.devServer({
     host: process.env.HOST,
@@ -205,17 +208,24 @@ const developmentConfig = merge([
 ])
 
 module.exports = env => {
-  process.env.NODE_ENV = env
+  console.log('env', env)
+  if (env.prod) {
+    process.env.NODE_ENV = 'production'
+    console.log('env.prod: ', env.prod, process.env.NODE_ENV)
+  } else {
+    process.env.NODE_ENV = 'development'
+    console.log('env.prod: ', env.prod, process.env.NODE_ENV)
+  }
 
   return merge(
     commonConfig,
-    env === 'production' ? productionConfig : developmentConfig
+    env.prod ? productionConfig : developmentConfig
   )
 }
 
 function getPaths ({
   sourceDir = 'app',
-  buildDir = 'build',
+  buildDir = 'docs',
   staticDir = '',
   images = 'images',
   fonts = 'fonts',
