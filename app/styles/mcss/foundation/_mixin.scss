@@ -1,0 +1,63 @@
+// - MCSS ---------------------------
+// ---- 00-layer: foundation --------
+// ---- Library, Resets, Fonts ------
+// ---- NameSpace: mfm-[componentName]
+
+$screen-md: 1366px;
+$screen-sm: 768px;
+$sp-height: 490px;
+
+@mixin mfm-orientation($orientation: land) {
+  @if $orientation == port {
+    @media (orientation: portrait) { @content; }
+  }
+
+  @else if $orientation == land {
+    @media (orientation: landscape) { @content; }
+  }
+
+  @else {
+    @content;
+  }
+}
+
+@mixin mfm-responsive($device: sp, $orient: null) {
+  // for Mobile, SmartPhone
+  @if $device == sp {
+    @media only screen
+      and (max-width: $screen-sm - 1px) {
+      @include mfm-orientation($orient) {
+        @content;
+      }
+    }
+  }
+
+  @else if $device == tablet {
+    @media only screen
+      and (min-width: $screen-sm)
+      and (max-width: $screen-md - 1px) {
+      @include mfm-orientation($orient) {
+        @content;
+      }
+    }
+  }
+
+  @else if $device == pc {
+    @media all
+      and (min-width: $screen-md) {
+      @include mfm-orientation($orient) {
+        @content;
+      }
+    }
+  }
+
+  // not Mobile, for Tablet and Desktop
+  @else {
+    @media all
+      and (min-width: $screen-sm) {
+      @include mfm-orientation($orient) {
+        @content;
+      }
+    }
+  }
+}

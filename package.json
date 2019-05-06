@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "analyze": "webpack-bundle-analyzer ./stats.json",
-    "stylelint": "stylelint \"app/styles\" --fix",
+    "stylelint": "stylelint \"app/styles\"",
     "prebuild": "yarn install",
     "build": "webpack --env.prod --progress",
     "predev": "yarn install",
