@@ -1,0 +1,29 @@
+footer.footer
+  P #{dateNow}
+  dl.dl
+    dt.dt 名前
+    dd.dd= pkgData.name
+    dt.dt 名前
+    dd.dd= pkgData.name
+    dt.dt 名前
+    dd.dd= pkgData.name
+    dt.dt 名前
+    dd.dd= pkgData.name
+    dt.dt 名前
+    dd.dd= pkgData.name
+  ul.ul
+    li.li
+      a(
+        href=pkgData.url.author
+        target="_blank"
+      ) author
+    li.li
+      a(
+        href=pkgData.url.github
+        target="_blank"
+      ) GitHub
+    li.li
+      a(
+        href=pkgData.url.twitter
+        target="_blank"
+      ) Twitter

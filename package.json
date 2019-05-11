@@ -1,7 +1,7 @@
 {
-  "name": "webpack-pug-scss-boiperplate",
+  "name": "webpack-pug-scss-example",
   "version": "2.1.3",
-  "description": "A webpack boilerplate for building web pages",
+  "description": "A webpack example for building web pages",
   "main": "./app/scripts/index.js",
   "author": "Tomonari Takai",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "dev": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --open --hot --env.development\""
   },
   "keywords": [
-    "boilerplate",
+    "example",
     "webpack",
     "pug",
     "jade",

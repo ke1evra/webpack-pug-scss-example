@@ -19,29 +19,14 @@ body {
     sans-serif;
 }
 
-.body {
-  @include mfm-responsive {
-    background-color: antiquewhite;
-  }
-
-  @include mfm-responsive(tablet) {
-    background-color: goldenrod;
-  }
-
-  @include mfm-responsive(pc) {
-    background-color: cadetblue;
-  }
-
-  @include mfm-responsive(sp, port) {
-    background-color: blueviolet;
-  }
-}
-
 // 01-layer: base
 // forms, buttons, navigation blocks
 
 // 02-layer: project
 // Registration form, Login block, Shopping cart
+
+@import "./project/header";
+@import "./project/slider";
 
 // 03-layer: cosmetic
 // links colors, global modifiers

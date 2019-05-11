@@ -4,3 +4,21 @@
 // You are free to code.
 
 @import './mcss/index.scss';
+
+.body {
+  @include mfm-responsive {
+    background-color: antiquewhite;
+  }
+
+  @include mfm-responsive(tablet) {
+    background-color: goldenrod;
+  }
+
+  @include mfm-responsive(pc) {
+    background-color: cadetblue;
+  }
+
+  @include mfm-responsive(sp, port) {
+    background-color: blueviolet;
+  }
+}
