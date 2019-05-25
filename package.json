@@ -8,6 +8,7 @@
   "scripts": {
     "analyze": "webpack-bundle-analyzer ./stats.json",
     "stylelint": "stylelint \"app/styles\"",
+    "lint": "yarn stylelint",
     "prebuild": "yarn install",
     "build": "webpack --env.prod --progress",
     "predev": "yarn install",
