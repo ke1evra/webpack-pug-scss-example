@@ -36,7 +36,7 @@ $color_ronchi_approx: #ecc94b;
 $color_golden_grass_approx: #d69e2e;
 $color_bourbon_approx: #b7791f;
 $color_hawaiian_tan_approx: #975a16;
-$color_sepia_approx: #7442010;
+$color_sepia_approx: #744210;
 $color_narvik_approx: #f0fff4;
 $color_blue_romance_approx: #c6f6d5;
 $color_algae_green_approx: #9ae6b4;
@@ -94,58 +94,18 @@ $black_25: rgba(0, 0, 0, 0.25);
 $color_havelock_blue_50_approx: rgba(66, 153, 225, 0.5);
 
 //fonts
-$font_0: Georgia;
-$font_1: Cambria;
-$font_2: Times New Roman;
-$font_3: Times;
-$font_4: serif;
-$font_5: Menlo;
-$font_6: Monaco;
-$font_7: Consolas;
-$font_8: Liberation Mono;
-$font_9: Courier New;
-$font_10: monospace;
-$font_11: sans-serif;
-
-//@extend-elements
-//original selectors
-//sub, sup
-%extend_1 {
- 	font-size: 75%;
- 	line-height: 0;
- 	position: relative;
- 	vertical-align: baseline;
-}
-
-//original selectors
-//button, input, optgroup, select, textarea
-%extend_2 {
- 	font-family: inherit;
- 	font-size: 100%;
- 	line-height: 1.15;
- 	margin: 0;
- 	padding: 0;
- 	line-height: inherit;
- 	color: inherit;
-}
-
-//original selectors
-//*, *::before, *::after
-%extend_3 {
- 	//Instead of the line below you could use @include box-sizing($bs)
- 	box-sizing: inherit;
- 	border-width: 0;
- 	border-style: solid;
- 	border-color: $color_mystic_approx;
-}
-
-//original selectors
-//ol, ul
-%extend_4 {
- 	list-style: none;
- 	margin: 0;
- 	padding: 0;
-}
+$font_0: 'Georgia';
+$font_1: 'Cambria';
+$font_2: 'Times New Roman';
+$font_3: 'Times';
+$font_4: 'serif';
+$font_5: 'Menlo';
+$font_6: 'Monaco';
+$font_7: 'Consolas';
+$font_8: 'Liberation Mono';
+$font_9: 'Courier New';
+$font_10: 'monospace';
+$font_11: 'sans-serif';
 
 .container {
  	width: 100%;
