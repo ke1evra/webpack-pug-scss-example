@@ -1,0 +1,30 @@
+// index.scss -------------------------
+// No rules,
+// You are free to code.
+
+@import '../base/base';
+
+.body {
+  @include baseMq-responsive {
+    background-color: antiquewhite;
+  }
+
+  @include baseMq-responsive(tablet) {
+    background-color: goldenrod;
+  }
+
+  @include baseMq-responsive(pc) {
+    background-color: cadetblue;
+  }
+
+  @include baseMq-responsive(sp, port) {
+    background-color: blueviolet;
+  }
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: center / cover no-repeat url('/app/images/image.png');
+}

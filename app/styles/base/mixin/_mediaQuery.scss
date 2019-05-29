@@ -1,13 +1,12 @@
-// - MCSS ----------------------------
-// ---- 00-layer: foundation ---------
-// ---- Library, Resets, Fonts -------
-// ---- NameSpace: mfm-[componentName]
+// - Original Mixin ------------------
+// ---- media query ------------------
+// ---- NameSpace: baseMq-[componentName]
 
 $screen-md: 1366px;
 $screen-sm: 768px;
 $sp-height: 490px;
 
-@mixin mfm-orientation($orientation: land) {
+@mixin baseMq-orientation($orientation: land) {
   @if $orientation == port {
     @media (orientation: portrait) { @content; }
   }
@@ -21,12 +20,12 @@ $sp-height: 490px;
   }
 }
 
-@mixin mfm-responsive($device: sp, $orient: null) {
+@mixin baseMq-responsive($device: sp, $orient: null) {
   // for Mobile, SmartPhone
   @if $device == sp {
     @media only screen
       and (max-width: $screen-sm - 1px) {
-      @include mfm-orientation($orient) {
+      @include baseMq-orientation($orient) {
         @content;
       }
     }
@@ -36,7 +35,7 @@ $sp-height: 490px;
     @media only screen
       and (min-width: $screen-sm)
       and (max-width: $screen-md - 1px) {
-      @include mfm-orientation($orient) {
+      @include baseMq-orientation($orient) {
         @content;
       }
     }
@@ -45,7 +44,7 @@ $sp-height: 490px;
   @else if $device == pc {
     @media all
       and (min-width: $screen-md) {
-      @include mfm-orientation($orient) {
+      @include baseMq-orientation($orient) {
         @content;
       }
     }
@@ -55,7 +54,7 @@ $sp-height: 490px;
   @else {
     @media all
       and (min-width: $screen-sm) {
-      @include mfm-orientation($orient) {
+      @include baseMq-orientation($orient) {
         @content;
       }
     }

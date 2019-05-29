@@ -1,0 +1,20 @@
+// ---------------------------------
+// Library, Resets, Fonts
+// ---------------------------------
+@import "../../../node_modules/destyle.css/destyle.css";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&subset=japanese');
+
+body {
+  font-family:
+    YakuHanJP_Noto,
+    'Noto Sans JP',
+    "Hiragino Sans",
+    Meiryo,
+    "Yu Gothic Medium",
+    sans-serif;
+}
+
+// ---------------------------------
+// Original FrameWork
+// ---------------------------------
+@import "./mixin/mediaQuery";
